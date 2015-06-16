@@ -1,0 +1,52 @@
+/*
+Theme Name: Superminimal
+Theme URI: http://github.com/antonellaP/superminimal/
+Version: 0.1.0
+Description: A basic theme used to demonstrate how to integrate the Kirki Customizer Toolkit into a WordPress Theme.
+Author: Maria Antonietta Perna
+Author URI: http://wpthememakeover.com
+License: GPLv2
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+.clearfix {
+  overflow: auto;
+  zoom: 1;
+}
+
+header,
+.sidebar,
+.main-content,
+footer {
+    padding: 1em;
+}
+
+body {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+
+#content.sidebar-left .sidebar {
+    float: left;
+    max-width: 40%;
+}
+
+#content.sidebar-left .main-content {
+    float: right;
+    max-width: 60%;
+}
+
+#content.sidebar-right .sidebar {
+    float: right;
+    max-width: 40%;
+}
+
+#content.sidebar-right .main-content {
+    float: left;
+    max-width: 60%;
+}
