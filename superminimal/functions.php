@@ -89,7 +89,9 @@ add_action( 'wp_enqueue_scripts', 'superminimal_styles' );
 /**
 * Include Kirki as a library for this theme 
 */
-include_once( dirname( __FILE__ ) . '/inc/kirki/kirki.php' );
+if ( ! class_exists( 'Kirki' ) ) {
+    include_once( dirname( __FILE__ ) . '/inc/kirki/kirki.php' );
+}
 
 /**
 * Configure Kirki 
@@ -317,9 +319,9 @@ function superminimal_demo_fields( $fields ) {
         'default'     => 'fullwidth',
         'priority'    => 10,
         'choices'     => array(
-            'sidebar-left' => admin_url() . '/images/align-left-2x.png',
-            'fullwidth' => admin_url() . '/images/align-center-2x.png',
-            'sidebar-right' => admin_url() . '/images/align-right-2x.png',
+            'sidebar-left' => trailingslashit( get_template_directory_uri() ) . 'inc/kirki/assets/images/2cl.png',
+            'fullwidth' => trailingslashit( get_template_directory_uri() ) . 'inc/kirki/assets/images/1c.png',
+            'sidebar-right' => trailingslashit( get_template_directory_uri() ) . 'inc/kirki/assets/images/2cr.png',
         ),
         'transport'   => 'postMessage',
         'js_vars'     => array(
